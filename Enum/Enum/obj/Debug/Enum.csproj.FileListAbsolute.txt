@@ -1,0 +1,7 @@
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Enum\Enum\bin\Debug\Enum.exe.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Enum\Enum\bin\Debug\Enum.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Enum\Enum\bin\Debug\Enum.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Enum\Enum\obj\Debug\Enum.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Enum\Enum\obj\Debug\Enum.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Enum\Enum\obj\Debug\Enum.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Enum\Enum\obj\Debug\Enum.pdb

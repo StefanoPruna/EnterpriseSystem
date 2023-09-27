@@ -1,0 +1,28 @@
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes\Classes\bin\Debug\Classes.exe.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes\Classes\bin\Debug\Classes.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes\Classes\bin\Debug\Classes.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes\Classes\obj\Debug\Classes.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes\Classes\obj\Debug\Classes.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes\Classes\obj\Debug\Classes.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes\Classes\obj\Debug\Classes.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy\Classes\bin\Debug\Classes.exe.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy\Classes\bin\Debug\Classes.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy\Classes\bin\Debug\Classes.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy\Classes\obj\Debug\Classes.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy\Classes\obj\Debug\Classes.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy\Classes\obj\Debug\Classes.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy\Classes\obj\Debug\Classes.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy - Copy\Classes\bin\Debug\Classes.exe.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy - Copy\Classes\bin\Debug\Classes.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy - Copy\Classes\bin\Debug\Classes.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy - Copy\Classes\obj\Debug\Classes.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy - Copy\Classes\obj\Debug\Classes.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy - Copy\Classes\obj\Debug\Classes.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Copy - Copy\Classes\obj\Debug\Classes.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Properties Get and Set\Classes\bin\Debug\Classes.exe.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Properties Get and Set\Classes\bin\Debug\Classes.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Properties Get and Set\Classes\bin\Debug\Classes.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Properties Get and Set\Classes\obj\Debug\Classes.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Properties Get and Set\Classes\obj\Debug\Classes.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Properties Get and Set\Classes\obj\Debug\Classes.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Classes - Properties Get and Set\Classes\obj\Debug\Classes.pdb
