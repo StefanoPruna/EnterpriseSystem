@@ -1,0 +1,10 @@
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\Component\bin\Debug\Component.exe.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\Component\bin\Debug\Component.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\Component\bin\Debug\Component.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\Component\obj\Debug\Component.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\Component\obj\Debug\Component.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\Component\obj\Debug\Component.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\Component\obj\Debug\Component.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\Component\bin\Debug\ClassLibraryCalculator.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\Component\bin\Debug\ClassLibraryCalculator.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\Component\obj\Debug\Component.csproj.CopyComplete

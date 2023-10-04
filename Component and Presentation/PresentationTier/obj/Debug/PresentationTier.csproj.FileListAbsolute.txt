@@ -1,0 +1,23 @@
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component - Presentation Tier\PresentationTier\bin\Debug\PresentationTier.exe.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component - Presentation Tier\PresentationTier\bin\Debug\PresentationTier.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component - Presentation Tier\PresentationTier\bin\Debug\PresentationTier.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component - Presentation Tier\PresentationTier\obj\Debug\PresentationTier.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component - Presentation Tier\PresentationTier\obj\Debug\PresentationTier.Form1.resources
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component - Presentation Tier\PresentationTier\obj\Debug\PresentationTier.Properties.Resources.resources
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component - Presentation Tier\PresentationTier\obj\Debug\PresentationTier.csproj.GenerateResource.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component - Presentation Tier\PresentationTier\obj\Debug\PresentationTier.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component - Presentation Tier\PresentationTier\obj\Debug\PresentationTier.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component - Presentation Tier\PresentationTier\obj\Debug\PresentationTier.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component and Presentation\PresentationTier\bin\Debug\PresentationTier.exe.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component and Presentation\PresentationTier\bin\Debug\PresentationTier.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component and Presentation\PresentationTier\bin\Debug\PresentationTier.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component and Presentation\PresentationTier\bin\Debug\ClassLibraryCalculator.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component and Presentation\PresentationTier\bin\Debug\ClassLibraryCalculator.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component and Presentation\PresentationTier\obj\Debug\PresentationTier.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component and Presentation\PresentationTier\obj\Debug\PresentationTier.Form1.resources
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component and Presentation\PresentationTier\obj\Debug\PresentationTier.Properties.Resources.resources
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component and Presentation\PresentationTier\obj\Debug\PresentationTier.csproj.GenerateResource.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component and Presentation\PresentationTier\obj\Debug\PresentationTier.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component and Presentation\PresentationTier\obj\Debug\PresentationTier.csproj.CopyComplete
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component and Presentation\PresentationTier\obj\Debug\PresentationTier.exe
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component and Presentation\PresentationTier\obj\Debug\PresentationTier.pdb

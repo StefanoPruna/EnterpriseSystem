@@ -1,0 +1,6 @@
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\ClassLibraryCalculator\bin\Debug\ClassLibraryCalculator.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\ClassLibraryCalculator\bin\Debug\ClassLibraryCalculator.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\ClassLibraryCalculator\obj\Debug\ClassLibraryCalculator.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\ClassLibraryCalculator\obj\Debug\ClassLibraryCalculator.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\ClassLibraryCalculator\obj\Debug\ClassLibraryCalculator.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\Component\ClassLibraryCalculator\obj\Debug\ClassLibraryCalculator.pdb
