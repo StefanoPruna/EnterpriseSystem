@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryCalculator
 {
-    //Logic 
+    //Backend Logic 
     //Changed from Internal (default) to Public class
     public class Calculator
     {

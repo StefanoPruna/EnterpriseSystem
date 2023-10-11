@@ -17,10 +17,9 @@ namespace PresentationTier
     {
         public Form1()
         {
-            InitializeComponent();
-            
+            InitializeComponent();           
         }
-
+        
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -31,7 +30,7 @@ namespace PresentationTier
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void exitButton(object sender, EventArgs e)
         {
             //Add a message when exit
             if (MessageBox.Show("Are you sure want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -53,7 +52,7 @@ namespace PresentationTier
 
             calculator.No1 = no1;
             calculator.No2 = no2;
-
+            
             //multiply the two int numbers
             int answ = calculator.Multiply();
 
@@ -131,6 +130,7 @@ namespace PresentationTier
             string s2 = textBox2.Text;
             string s1 = textBox1.Text;
 
+            //connecting to the Backend Logic
             Calculator calculator = new Calculator();
                         
             //convert the strings into int
@@ -143,6 +143,7 @@ namespace PresentationTier
             //add the two int numbers
             int answ = calculator.Add();
 
+            //Frontend task
             //convert the answ from int to string
             string myAnswer = answ.ToString();
 
@@ -158,6 +159,11 @@ namespace PresentationTier
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //Save button, the View UI
         }
     }
 }

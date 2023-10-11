@@ -1,0 +1,9 @@
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\MVC\ClassLibraryController\bin\Debug\ClassLibraryController.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\MVC\ClassLibraryController\bin\Debug\ClassLibraryController.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\MVC\ClassLibraryController\bin\Debug\ClassLibraryCalculator.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\MVC\ClassLibraryController\bin\Debug\ClassLibraryCalculator.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\MVC\ClassLibraryController\obj\Debug\ClassLibraryController.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\MVC\ClassLibraryController\obj\Debug\ClassLibraryController.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\MVC\ClassLibraryController\obj\Debug\ClassLibraryController.csproj.CopyComplete
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\MVC\ClassLibraryController\obj\Debug\ClassLibraryController.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\MVC\ClassLibraryController\obj\Debug\ClassLibraryController.pdb
