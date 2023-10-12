@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Controller;
+
 namespace View
 {
     public partial class FormDisplayUsers : Form
@@ -15,6 +17,13 @@ namespace View
         public FormDisplayUsers()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Connect to the UserController Class
+            UserController userController = new UserController();
+            userController.GetAllUsers();
         }
     }
 }
