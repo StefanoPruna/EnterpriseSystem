@@ -11,3 +11,6 @@ C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\bin\Debug\Controller
 C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\bin\Debug\Controller.pdb
 C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\obj\Debug\View.FormDisplayUsers.resources
 C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\obj\Debug\View.csproj.CopyComplete
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\bin\Debug\Model.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\bin\Debug\Model.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\bin\Debug\Model.dll.config

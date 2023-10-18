@@ -52,6 +52,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="UserDAO.cs" />
     <Compile Include="UserLogic.cs" />
   </ItemGroup>

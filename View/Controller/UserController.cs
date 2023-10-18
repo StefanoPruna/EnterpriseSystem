@@ -10,9 +10,12 @@ namespace Controller
 {
     public class UserController
     {
-        public void GetAllUsers()
+        public List<User> GetAllUsers()
         {
+            //Logic is connected to the Model
             UserLogic userLogic = new UserLogic();
+            List<User> users = userLogic.GetAllUsers();
+            return users;
         }
     }
 }

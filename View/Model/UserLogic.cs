@@ -8,9 +8,12 @@ namespace Model
 {
     public class UserLogic
     {
-        public void GetAllUsers()
+        public List<User> GetAllUsers()
         {
-
+            //The logic has to connected to the DAO
+            UserDAO userDAO = new UserDAO();
+            List<User> users = userDAO.GetAllUsers();
+            return users;
         }
     }
 }

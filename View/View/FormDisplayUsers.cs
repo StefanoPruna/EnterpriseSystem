@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Controller;
+using Model;
 
 namespace View
 {
@@ -23,7 +24,10 @@ namespace View
         {
             //Connect to the UserController Class
             UserController userController = new UserController();
-            userController.GetAllUsers();
+            List<User> users = userController.GetAllUsers();
+
+            //display the data
+            dataGridView1.DataSource = users;
         }
     }
 }

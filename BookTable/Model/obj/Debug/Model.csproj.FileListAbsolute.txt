@@ -1,0 +1,14 @@
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Model\bin\Debug\Model.dll.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Model\bin\Debug\Model.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Model\bin\Debug\Model.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Model\obj\Debug\Model.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Model\obj\Debug\Model.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BookTable\Model\bin\Debug\Model.dll.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BookTable\Model\bin\Debug\Model.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BookTable\Model\bin\Debug\Model.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BookTable\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BookTable\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BookTable\Model\obj\Debug\Model.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BookTable\Model\obj\Debug\Model.pdb

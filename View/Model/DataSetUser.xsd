@@ -78,7 +78,7 @@ SELECT UID, UserName, Password, UserLevel FROM TabUser WHERE (UID = @UID)</Comma
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSetUser" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetUser" msprop:Generator_DataSetName="DataSetUser">
+  <xs:element name="DataSetUser" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetUser" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetUser">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="TabUser" msprop:Generator_RowEvHandlerName="TabUserRowChangeEventHandler" msprop:Generator_RowDeletedName="TabUserRowDeleted" msprop:Generator_RowDeletingName="TabUserRowDeleting" msprop:Generator_RowEvArgName="TabUserRowChangeEvent" msprop:Generator_TablePropName="TabUser" msprop:Generator_RowChangedName="TabUserRowChanged" msprop:Generator_RowChangingName="TabUserRowChanging" msprop:Generator_TableClassName="TabUserDataTable" msprop:Generator_RowClassName="TabUserRow" msprop:Generator_TableVarName="tableTabUser" msprop:Generator_UserTableName="TabUser">
