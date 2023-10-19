@@ -14,3 +14,5 @@ C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\obj\Debug\View.cspro
 C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\bin\Debug\Model.dll
 C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\bin\Debug\Model.pdb
 C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\bin\Debug\Model.dll.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\obj\Debug\View.FormLogin.resources
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\obj\Debug\View.FormDisplayBooks.resources

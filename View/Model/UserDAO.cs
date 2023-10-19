@@ -51,5 +51,10 @@ namespace Model
             else
                 return null;
         }
+        public void ValideLogin(string sUserName, string sPassword)
+        {
+            TabUserTableAdapter tabUserTableAdapter = new TabUserTableAdapter();
+            DataSetUser.TabUserDataTable tabUserDataTable = tabUserTableAdapter.ValideLogin(sUserName, sPassword);            
+        }
     }
 }

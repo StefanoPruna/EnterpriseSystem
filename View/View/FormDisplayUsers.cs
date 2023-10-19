@@ -29,5 +29,12 @@ namespace View
             //display the data
             dataGridView1.DataSource = users;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Move to Books table
+            FormDisplayBooks displayBooks = new FormDisplayBooks();
+            displayBooks.Show();
+        }
     }
 }

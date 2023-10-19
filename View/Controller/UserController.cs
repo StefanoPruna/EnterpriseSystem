@@ -17,5 +17,11 @@ namespace Controller
             List<User> users = userLogic.GetAllUsers();
             return users;
         }
+
+        public void ValideLogin(string sUserName, string sPassword)
+        {
+            UserLogic userLogic = new UserLogic();
+            userLogic.ValideLogin(sUserName, sPassword);
+        }
     }
 }

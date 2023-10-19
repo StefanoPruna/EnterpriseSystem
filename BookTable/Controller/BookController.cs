@@ -9,7 +9,7 @@ using Model;
 namespace Controller
 {
     public class BookController
-    {
+    {    
         public List<Books> GetAllBooks()
         {
             //Logic is connected to the Model
