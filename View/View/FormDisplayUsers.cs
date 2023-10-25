@@ -36,5 +36,17 @@ namespace View
             FormDisplayBooks displayBooks = new FormDisplayBooks();
             displayBooks.Show();
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                Application.Exit();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+        }
     }
 }

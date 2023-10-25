@@ -16,8 +16,12 @@ namespace View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Starts with the Login
             Application.Run(new FormLogin());
+
+            //Then goes to the Books table
             Application.Run(new FormDisplayBooks());
+           
             Application.Run(new FormDisplayUsers());
         }
     }

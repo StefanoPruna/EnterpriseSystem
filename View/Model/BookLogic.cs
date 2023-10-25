@@ -15,5 +15,12 @@ namespace Model
             List<Books> books = bookDAO.GetAllBooks();
             return books;
         }
+       
+        public List<Books> SearchBook(string booksName, int publishedYear)
+        {
+            BookDAO searchBookDAO = new BookDAO();
+            List<Books> searchBook = searchBookDAO.SearchBook(booksName, publishedYear);
+            return searchBook;
+        }
     }
 }

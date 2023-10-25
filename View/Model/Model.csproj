@@ -44,6 +44,9 @@
     <Compile Include="BookDAO.cs" />
     <Compile Include="BookLogic.cs" />
     <Compile Include="Books.cs" />
+    <Compile Include="DataSetBook.cs">
+      <DependentUpon>DataSetBook.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetBook.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -18,10 +18,12 @@ namespace Controller
             return users;
         }
 
-        public void ValideLogin(string sUserName, string sPassword)
+        public User ValideLogin(string sUserName, string sPassword)
         {
             UserLogic userLogic = new UserLogic();
             userLogic.ValideLogin(sUserName, sPassword);
+            User user = userLogic.ValideLogin(sUserName, sPassword);
+            return user;
         }
     }
 }

@@ -16,12 +16,12 @@ namespace Model
             return users;
         }
 
-        public void ValideLogin(string sUserName, string sPassword)
+        public User ValideLogin(string sUserName, string sPassword)
         {
             //The logic has to connected to the DAO
             UserDAO userDAO = new UserDAO();
-            userDAO.ValideLogin(sUserName, sPassword);
-            //return users;
+            User user = userDAO.ValideLogin(sUserName, sPassword);
+            return user;
         }
     }
 }

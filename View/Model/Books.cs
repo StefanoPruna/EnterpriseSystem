@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +18,7 @@ namespace Model
         int publishYear;
         int pages;
         string publisher;
-
+        
         public string Isbn { get => isbn; set => isbn = value; }
         public string BookName { get => bookName; set => bookName = value; }
         public int Author { get => author; set => author = value; }

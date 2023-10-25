@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -51,10 +52,30 @@ namespace Model
             else
                 return null;
         }
-        public void ValideLogin(string sUserName, string sPassword)
+        public User ValideLogin(string sUserName, string sPassword)
         {
             TabUserTableAdapter tabUserTableAdapter = new TabUserTableAdapter();
-            DataSetUser.TabUserDataTable tabUserDataTable = tabUserTableAdapter.ValideLogin(sUserName, sPassword);            
+
+            //this function below will run the SQL and saves the data in the tabUserDataTable
+            DataSetUser.TabUserDataTable tabUserDataTable = tabUserTableAdapter.ValideLogin(sUserName, sPassword);     
+            
+            int dataCount = tabUserDataTable.Count;
+
+            if (dataCount != 0) 
+            {
+                User user = new User();
+
+                //access the returned row which is inside the tabUserDataTable object
+                DataRow userDataRow = tabUserDataTable.Rows[0];
+
+                user.Uid = Convert.ToInt32(userDataRow["UID"]);
+                user.UserName = userDataRow["UserName"].ToString();
+                user.Password = userDataRow["Password"].ToString();
+                user.UserLevel = Convert.ToInt32(userDataRow["UserLevel"]);
+
+                return user;
+            }
+            else { return null; }
         }
     }
 }

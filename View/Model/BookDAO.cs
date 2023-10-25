@@ -40,6 +40,7 @@ namespace Model
                     //encapsulate the above data into a Book Object
                     //so we need to create an Entity class called Book
                     Books book = new Books();
+
                     book.Isbn = isbn;
                     book.BookName = bookName;
                     book.Author = author;
@@ -54,6 +55,49 @@ namespace Model
                 }
                 //return the List of UO
                 return books;
+            }
+            else
+                return null;
+        }
+
+        public List<Books> SearchBook(string booksName, int publishedYear)
+        {
+            TabBookTableAdapter tabBookTableAdapter = new TabBookTableAdapter();
+            DataSetBook.TabBookDataTable tabBookDataTable = tabBookTableAdapter.SearchBook(booksName, publishedYear);
+
+            //Traverse the tabBookDataTable and get all the data one by one (loop)
+            //1st check if any data is returned
+            int dataCount = tabBookDataTable.Count;
+
+            if (dataCount != 0)
+            {
+                Books searchBooks = new Books();
+
+                DataRow bookDataRow = tabBookDataTable.Rows[0];
+
+                string isbn = bookDataRow["ISBN"].ToString();
+                string bookName = bookDataRow["BookName"].ToString();
+                int author = Convert.ToInt32(bookDataRow["Author"]);
+                int category = Convert.ToInt32(bookDataRow["Category"]);
+                int language = Convert.ToInt32(bookDataRow["Language"]);
+                int publishYear = Convert.ToInt32(bookDataRow["PublishYear"]);
+                int pages = Convert.ToInt32(bookDataRow["Pages"]);
+                string publisher = bookDataRow["Publisher"].ToString();
+
+                List<Books> searchedBooks = new List<Books>();
+
+                searchBooks.Isbn = isbn; //bookDataRow["ISBN"].ToString();
+                searchBooks.BookName = bookName;// bookDataRow["BookName"].ToString();
+                searchBooks.Author = author; // Convert.ToInt32(bookDataRow["Author"]);
+                searchBooks.Category = category;// Convert.ToInt32(bookDataRow["Category"]);
+                searchBooks.Language = language;// Convert.ToInt32(bookDataRow["Language"]);
+                searchBooks.PublishYear = publishedYear;// Convert.ToInt32(bookDataRow["PublishYear"]);
+                searchBooks.Pages = pages;// Convert.ToInt32(bookDataRow["Pages"]);
+                searchBooks.Publisher = publisher;// bookDataRow["Publisher"].ToString();             
+
+                searchedBooks.Add(searchBooks);
+
+                return searchedBooks;
             }
             else
                 return null;
