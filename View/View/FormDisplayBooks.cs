@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Controller;
 using Model;
 using Model.DataSetBookTableAdapters;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static Model.DataSetBook;
 
 namespace View
@@ -35,45 +36,24 @@ namespace View
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string searchBook = searchTextBox.Text;
+            string searchBookName = searchTextBox.Text;
             string publishedYear = yearTextBox.Text;            
 
             BookController bookController = new BookController();
 
-            if (searchBook != "" &&  publishedYear != "")
+            if (searchBookName == "" || publishedYear == "")
+            {
+                if (MessageBox.Show("Please insert both a value in bookname && publish year", "Retry", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
+                {
+
+                }                               
+            }
+            else
             {
                 int publishYear = Convert.ToInt32(publishedYear);
 
-                List<Books> searchedBook = bookController.SearchBook(searchBook, publishYear);
-
-                //List<Books> allBooks = bookController.GetAllBooks();
-
-                //List<Books> name = bookController.SearchBook(searchBook, publishYear);
-
-                //for (int i = 0; i < allBooks.Count; i++)
-                //{                    
-                //    if (allBooks.Contains(name))
-                //    {
-                //        List<Books> searchedBook = bookController.SearchBook(searchBook, publishYear);
-                //        dataGridView1.DataSource = searchedBook;
-                //    }
-                //}
-
-
-                if (searchBook.StartsWith("p") || publishedYear.Contains("201"))
-                {
-                    
-                    dataGridView1.DataSource = searchedBook;
-                }
-            }
-                   
-            else
-            {
-                if (MessageBox.Show("Your input is incorrect", "Retry", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
-                {                    
-                    FormDisplayBooks book = new FormDisplayBooks();
-                    book.Show();
-                }
+                List<Books> searchedBooks = bookController.SearchBook(searchBookName, publishYear);
+                dataGridView1.DataSource = searchedBooks;
             }
         }
 
@@ -97,6 +77,13 @@ namespace View
         private void yearTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //Clear button
+            searchTextBox.Clear();
+            yearTextBox.Clear();
         }
     }
 }

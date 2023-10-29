@@ -4,6 +4,9 @@
 
     partial class DataSetBook
     {
+        partial class TabBookDataTable
+        {
+        }
     }
 }
 

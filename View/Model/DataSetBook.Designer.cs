@@ -981,10 +981,11 @@ SELECT ISBN, BookName, Author, Category, Language, PublishYear, Pages, Publisher
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT ISBN, BookName, Author, Category, Language, PublishYear, Pages, Publisher\r" +
-                "\nFROM     TabBook\r\nWHERE (BookName =@BookName) OR (PublishYear = @PublishYear)";
+                "\nFROM     TabBook\r\nWHERE BookName LIKE \'%\' + @BookName + \'%\' OR CAST(PublishYear" +
+                " AS VARCHAR(9)) LIKE \'%\' + @PublishYear + \'%\'";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookName", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "BookName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PublishYear", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PublishYear", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PublishYear", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1026,7 +1027,7 @@ SELECT ISBN, BookName, Author, Category, Language, PublishYear, Pages, Publisher
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DataSetBook.TabBookDataTable SearchBook(string BookName, int PublishYear) {
+        public virtual DataSetBook.TabBookDataTable SearchBook(string BookName, string PublishYear) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((BookName == null)) {
                 throw new global::System.ArgumentNullException("BookName");
@@ -1034,7 +1035,12 @@ SELECT ISBN, BookName, Author, Category, Language, PublishYear, Pages, Publisher
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(BookName));
             }
-            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(PublishYear));
+            if ((PublishYear == null)) {
+                throw new global::System.ArgumentNullException("PublishYear");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(PublishYear));
+            }
             DataSetBook.TabBookDataTable dataTable = new DataSetBook.TabBookDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

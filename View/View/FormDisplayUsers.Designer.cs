@@ -45,14 +45,15 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(818, 302);
+            this.dataGridView1.Size = new System.Drawing.Size(817, 204);
             this.dataGridView1.TabIndex = 0;
             // 
             // displayUsersButton
             // 
-            this.displayUsersButton.Location = new System.Drawing.Point(112, 441);
+            this.displayUsersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayUsersButton.Location = new System.Drawing.Point(112, 347);
             this.displayUsersButton.Name = "displayUsersButton";
-            this.displayUsersButton.Size = new System.Drawing.Size(133, 23);
+            this.displayUsersButton.Size = new System.Drawing.Size(175, 130);
             this.displayUsersButton.TabIndex = 1;
             this.displayUsersButton.Text = "Display All Users";
             this.displayUsersButton.UseVisualStyleBackColor = true;
@@ -60,22 +61,29 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(340, 441);
+            this.button2.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button2.Location = new System.Drawing.Point(340, 347);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 23);
+            this.button2.Size = new System.Drawing.Size(168, 117);
             this.button2.TabIndex = 2;
             this.button2.Text = "Go to Books Table";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(569, 441);
+            this.backButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.ForeColor = System.Drawing.SystemColors.Info;
+            this.backButton.Location = new System.Drawing.Point(569, 347);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(122, 23);
+            this.backButton.Size = new System.Drawing.Size(122, 117);
             this.backButton.TabIndex = 3;
             this.backButton.Text = "Go Back to Login";
-            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // adminLabel
@@ -91,9 +99,11 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(799, 441);
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.exitButton.Location = new System.Drawing.Point(799, 347);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(75, 23);
+            this.exitButton.Size = new System.Drawing.Size(75, 117);
             this.exitButton.TabIndex = 5;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
@@ -112,6 +122,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDisplayUsers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDisplayUsers";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

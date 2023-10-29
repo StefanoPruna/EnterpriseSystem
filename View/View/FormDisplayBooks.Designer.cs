@@ -38,6 +38,8 @@
             this.booksDashboard = new System.Windows.Forms.Label();
             this.yearTextBox = new System.Windows.Forms.TextBox();
             this.yearLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,9 +53,10 @@
             // 
             // displayBooksButton
             // 
-            this.displayBooksButton.Location = new System.Drawing.Point(104, 391);
+            this.displayBooksButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayBooksButton.Location = new System.Drawing.Point(54, 391);
             this.displayBooksButton.Name = "displayBooksButton";
-            this.displayBooksButton.Size = new System.Drawing.Size(138, 39);
+            this.displayBooksButton.Size = new System.Drawing.Size(188, 68);
             this.displayBooksButton.TabIndex = 1;
             this.displayBooksButton.Text = "Display All Books";
             this.displayBooksButton.UseVisualStyleBackColor = true;
@@ -74,9 +77,10 @@
             // 
             // goBackButton
             // 
-            this.goBackButton.Location = new System.Drawing.Point(350, 391);
+            this.goBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goBackButton.Location = new System.Drawing.Point(248, 391);
             this.goBackButton.Name = "goBackButton";
-            this.goBackButton.Size = new System.Drawing.Size(128, 39);
+            this.goBackButton.Size = new System.Drawing.Size(164, 68);
             this.goBackButton.TabIndex = 3;
             this.goBackButton.Text = "Go Back to Login";
             this.goBackButton.UseVisualStyleBackColor = true;
@@ -103,9 +107,10 @@
             // 
             // exitButton
             // 
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.Location = new System.Drawing.Point(575, 391);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(128, 39);
+            this.exitButton.Size = new System.Drawing.Size(154, 68);
             this.exitButton.TabIndex = 6;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
@@ -116,7 +121,7 @@
             this.booksDashboard.AutoSize = true;
             this.booksDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.booksDashboard.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.booksDashboard.Location = new System.Drawing.Point(277, 29);
+            this.booksDashboard.Location = new System.Drawing.Point(277, 9);
             this.booksDashboard.Name = "booksDashboard";
             this.booksDashboard.Size = new System.Drawing.Size(230, 31);
             this.booksDashboard.TabIndex = 7;
@@ -141,11 +146,35 @@
             this.yearLabel.TabIndex = 8;
             this.yearLabel.Text = "Search by Year:";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(418, 391);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 68);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "CLEAR";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(182, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(411, 25);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "You have to insert something in both searches";
+            // 
             // FormDisplayBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(816, 483);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.yearTextBox);
             this.Controls.Add(this.yearLabel);
             this.Controls.Add(this.booksDashboard);
@@ -157,6 +186,7 @@
             this.Controls.Add(this.displayBooksButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormDisplayBooks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDisplayBooks";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -176,5 +206,7 @@
         private System.Windows.Forms.Label booksDashboard;
         private System.Windows.Forms.TextBox yearTextBox;
         private System.Windows.Forms.Label yearLabel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }

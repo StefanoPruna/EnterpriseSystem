@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Model.DataSetBookTableAdapters;
+using static Model.DataSetBook;
 
 namespace Model
 {
@@ -63,44 +64,48 @@ namespace Model
         public List<Books> SearchBook(string booksName, int publishedYear)
         {
             TabBookTableAdapter tabBookTableAdapter = new TabBookTableAdapter();
-            DataSetBook.TabBookDataTable tabBookDataTable = tabBookTableAdapter.SearchBook(booksName, publishedYear);
+            DataSetBook.TabBookDataTable tabBookDataTable = tabBookTableAdapter.SearchBook(booksName, publishedYear.ToString());
 
             //Traverse the tabBookDataTable and get all the data one by one (loop)
             //1st check if any data is returned
             int dataCount = tabBookDataTable.Count;
 
+            // This is the result container 
+            List<Books> searchedBooks = new List<Books>();
+
             if (dataCount != 0)
             {
-                Books searchBooks = new Books();
+                for (int i = 0; i < tabBookDataTable.Rows.Count; i++)
+                {
+                    Books book = new Books();
 
-                DataRow bookDataRow = tabBookDataTable.Rows[0];
+                    DataRow bookDataRow = tabBookDataTable.Rows[i];
 
-                string isbn = bookDataRow["ISBN"].ToString();
-                string bookName = bookDataRow["BookName"].ToString();
-                int author = Convert.ToInt32(bookDataRow["Author"]);
-                int category = Convert.ToInt32(bookDataRow["Category"]);
-                int language = Convert.ToInt32(bookDataRow["Language"]);
-                int publishYear = Convert.ToInt32(bookDataRow["PublishYear"]);
-                int pages = Convert.ToInt32(bookDataRow["Pages"]);
-                string publisher = bookDataRow["Publisher"].ToString();
+                    string isbn = bookDataRow["ISBN"].ToString();
+                    string bookName = bookDataRow["BookName"].ToString();
+                    int author = Convert.ToInt32(bookDataRow["Author"]);
+                    int category = Convert.ToInt32(bookDataRow["Category"]);
+                    int language = Convert.ToInt32(bookDataRow["Language"]);
+                    int publishYear = Convert.ToInt32(bookDataRow["PublishYear"]);
+                    int pages = Convert.ToInt32(bookDataRow["Pages"]);
+                    string publisher = bookDataRow["Publisher"].ToString();
 
-                List<Books> searchedBooks = new List<Books>();
+                    book.Isbn = isbn; //bookDataRow["ISBN"].ToString();
+                    book.BookName = bookName;// bookDataRow["BookName"].ToString();
+                    book.Author = author; // Convert.ToInt32(bookDataRow["Author"]);
+                    book.Category = category;// Convert.ToInt32(bookDataRow["Category"]);
+                    book.Language = language;// Convert.ToInt32(bookDataRow["Language"]);
+                    book.PublishYear = publishedYear;// Convert.ToInt32(bookDataRow["PublishYear"]);
+                    book.Pages = pages;// Convert.ToInt32(bookDataRow["Pages"]);
+                    book.Publisher = publisher;// bookDataRow["Publisher"].ToString();             
 
-                searchBooks.Isbn = isbn; //bookDataRow["ISBN"].ToString();
-                searchBooks.BookName = bookName;// bookDataRow["BookName"].ToString();
-                searchBooks.Author = author; // Convert.ToInt32(bookDataRow["Author"]);
-                searchBooks.Category = category;// Convert.ToInt32(bookDataRow["Category"]);
-                searchBooks.Language = language;// Convert.ToInt32(bookDataRow["Language"]);
-                searchBooks.PublishYear = publishedYear;// Convert.ToInt32(bookDataRow["PublishYear"]);
-                searchBooks.Pages = pages;// Convert.ToInt32(bookDataRow["Pages"]);
-                searchBooks.Publisher = publisher;// bookDataRow["Publisher"].ToString();             
-
-                searchedBooks.Add(searchBooks);
-
+                    searchedBooks.Add(book);
+                }
+                   
                 return searchedBooks;
             }
             else
                 return null;
-        }
+        }        
     }
 }
