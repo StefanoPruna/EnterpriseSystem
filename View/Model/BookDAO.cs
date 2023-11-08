@@ -61,10 +61,10 @@ namespace Model
                 return null;
         }
 
-        public List<Books> SearchBook(string booksName, int publishedYear)
+        public List<Books> SearchBook(string booksName, int publishedYear, string publisherName)
         {
             TabBookTableAdapter tabBookTableAdapter = new TabBookTableAdapter();
-            DataSetBook.TabBookDataTable tabBookDataTable = tabBookTableAdapter.SearchBook(booksName, publishedYear.ToString());
+            DataSetBook.TabBookDataTable tabBookDataTable = tabBookTableAdapter.SearchBook(booksName, publishedYear.ToString(), publisherName);
 
             //Traverse the tabBookDataTable and get all the data one by one (loop)
             //1st check if any data is returned

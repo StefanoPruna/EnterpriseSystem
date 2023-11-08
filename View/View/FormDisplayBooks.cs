@@ -37,22 +37,23 @@ namespace View
         private void button2_Click(object sender, EventArgs e)
         {
             string searchBookName = searchTextBox.Text;
-            string publishedYear = yearTextBox.Text;            
+            string publishedYear = yearTextBox.Text;     
+            string publisherName = publisherTextBox.Text;
 
             BookController bookController = new BookController();
 
             if (searchBookName == "" || publishedYear == "")
             {
-                if (MessageBox.Show("Please insert both a value in bookname && publish year", "Retry", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
+                if (MessageBox.Show("Please insert both a value in bookname && publisher && publish year", "Retry", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                 {
-
+                   
                 }                               
             }
             else
             {
                 int publishYear = Convert.ToInt32(publishedYear);
 
-                List<Books> searchedBooks = bookController.SearchBook(searchBookName, publishYear);
+                List<Books> searchedBooks = bookController.SearchBook(searchBookName, publishYear, publisherName);
                 dataGridView1.DataSource = searchedBooks;
             }
         }
@@ -84,6 +85,8 @@ namespace View
             //Clear button
             searchTextBox.Clear();
             yearTextBox.Clear();
+            publisherTextBox.Clear();
+            dataGridView1.DataSource = "";
         }
     }
 }

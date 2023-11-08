@@ -34,6 +34,7 @@
             this.backButton = new System.Windows.Forms.Button();
             this.adminLabel = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,7 +102,7 @@
             // 
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.exitButton.Location = new System.Drawing.Point(799, 347);
+            this.exitButton.Location = new System.Drawing.Point(911, 347);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 117);
             this.exitButton.TabIndex = 5;
@@ -109,11 +110,23 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(737, 347);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 117);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Got to Category Table";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FormDisplayUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1055, 489);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.adminLabel);
             this.Controls.Add(this.backButton);
@@ -138,5 +151,6 @@
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label adminLabel;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button button1;
     }
 }

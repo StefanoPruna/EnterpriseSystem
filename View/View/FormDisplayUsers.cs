@@ -48,5 +48,11 @@ namespace View
             FormLogin formLogin = new FormLogin();
             formLogin.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormCategoryMaster formCategory = new FormCategoryMaster();
+            formCategory.Show();
+        }
     }
 }

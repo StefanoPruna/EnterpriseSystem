@@ -16,10 +16,10 @@ namespace Model
             return books;
         }
        
-        public List<Books> SearchBook(string booksName, int publishedYear)
+        public List<Books> SearchBook(string booksName, int publishedYear, string publisherName)
         {
             BookDAO searchBookDAO = new BookDAO();
-            List<Books> searchBook = searchBookDAO.SearchBook(booksName, publishedYear);
+            List<Books> searchBook = searchBookDAO.SearchBook(booksName, publishedYear, publisherName);
             return searchBook;
         }
     }

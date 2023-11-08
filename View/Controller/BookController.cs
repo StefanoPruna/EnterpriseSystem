@@ -18,10 +18,12 @@ namespace Controller
             return books;
         }
        
-        public List<Books> SearchBook(string booksName, int publishedYear)
+        public List<Books> SearchBook(string booksName, int publishedYear, string publisherName)
         {
-            BookDAO searchBookDAO = new BookDAO();
-            List<Books> searchBook = searchBookDAO.SearchBook(booksName, publishedYear);
+            //BookDAO searchBookDAO = new BookDAO();
+            //List<Books> searchBook = searchBookDAO.SearchBook(booksName, publishedYear, publisherName);
+            BookLogic bookLogic = new BookLogic();
+            List<Books> searchBook = bookLogic.SearchBook(booksName, publishedYear, publisherName);
 
             return searchBook;
         }
