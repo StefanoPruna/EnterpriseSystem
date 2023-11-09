@@ -54,5 +54,82 @@ namespace View
             FormCategoryMaster formCategory = new FormCategoryMaster();
             formCategory.Show();
         }
+
+        private void addNewButton_Click(object sender, EventArgs e)
+        {
+            string newUserName = usernameTextBox.Text;
+            string newPassword = passwordTextBox.Text;
+            string newLevel = levelTextBox.Text;
+
+            UserController userController = new UserController();
+
+            if(newUserName == "" || newPassword == "" || newLevel == "")
+            {
+                if (MessageBox.Show("You have not insert the correct details", "Retry", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
+                { }
+            }
+            else
+            {
+                int level = Convert.ToInt32(newLevel);
+                int newUser = userController.InsertNewUser(newUserName, newPassword, level);
+
+                if (newUser == -1)
+                    MessageBox.Show("Sorry, you have not inserted the correct details");
+                else
+                    MessageBox.Show("Good, you have inserted a new User.");
+            }
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            string newUserName = usernameTextBox.Text;
+            string newPassword = passwordTextBox.Text;
+            string newLevel = levelTextBox.Text;
+            string originalUser = originalTextBox.Text;
+
+            UserController userController = new UserController();
+
+            if (newUserName == "" || newPassword == "" || newLevel == "" || originalUser == "")
+            {
+                if (MessageBox.Show("You have not insert the correct details", "Retry", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
+                { }
+            }
+            else
+            {
+                int level = Convert.ToInt32(newLevel);
+                int newUser = userController.UpdateUser(newUserName, newPassword, level, originalUser);
+
+                if (newUser == -1)
+                    MessageBox.Show("Sorry, you have not inserted the correct details");
+                else
+                    MessageBox.Show("Good, you have inserted a new User.");
+            }
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            string newUserName = usernameTextBox.Text;
+
+            UserController userController = new UserController();
+
+            if (newUserName == "")
+            {
+                if (MessageBox.Show("You have not insert the correct details", "Retry", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
+                { }
+            }
+            else
+            {
+                //int level = Convert.ToInt32(newLevel);
+                int newUser = userController.DeleteUser(newUserName);
+
+                if (newUser == -1)
+                    MessageBox.Show("Sorry, you have not inserted the correct details");
+                else
+                {
+                    if ((MessageBox.Show("Are you sure want to delete it?", "YesNo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes))
+                        MessageBox.Show("Good, Delete Succesful!!!");
+                }
+            }
+        }
     }
 }

@@ -27,10 +27,10 @@ namespace Model
             return noOfRows;
         }
 
-        public int UpdateCategory(string originalNames, int originalCid, string newName, int newCid)
+        public int UpdateCategory(string originalNames, int originalCid, string newName)
         {
             CategoryDAO categoryDAO = new CategoryDAO();
-            int noOfRows = categoryDAO.UpdateCategory(originalNames, originalCid, newName, newCid);
+            int noOfRows = categoryDAO.UpdateCategory(originalNames, originalCid, newName);
             return noOfRows;
         }
     }

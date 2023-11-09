@@ -56,10 +56,10 @@ namespace Model
             return noOfRows;
         }
 
-        public int UpdateCategory(string originalNames, int originalCid, string newName, int newCid)
+        public int UpdateCategory(string originalNames, int originalCid, string newName)
         {
             TabCategoryTableAdapter categoryAdapter = new TabCategoryTableAdapter();
-            int noOfRows = categoryAdapter.UpdateCategory(originalNames, originalCid, newName, newCid);
+            int noOfRows = categoryAdapter.UpdateCategory(originalNames, originalCid, newName);
             return noOfRows;
         }
     }

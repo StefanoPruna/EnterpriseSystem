@@ -807,13 +807,11 @@ namespace Model.DataSetCategoryTableAdapters {
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "UPDATE [dbo].[TabCategory] SET [CategoryName] = @CategoryName WHERE (([CID] = @Or" +
-                "iginal_CID) AND ([CategoryName] = @Original_CategoryName));\r\nSELECT CID, Categor" +
-                "yName FROM TabCategory WHERE (CID = @CID)";
+                "iginal_CID) AND ([CategoryName] = @Original_CategoryName));";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CategoryName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "CategoryName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CategoryName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "CategoryName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1035,7 +1033,7 @@ namespace Model.DataSetCategoryTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateCategory(string CategoryName, int Original_CID, string Original_CategoryName, int CID) {
+        public virtual int UpdateCategory(string CategoryName, int Original_CID, string Original_CategoryName) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((CategoryName == null)) {
                 throw new global::System.ArgumentNullException("CategoryName");
@@ -1050,7 +1048,6 @@ namespace Model.DataSetCategoryTableAdapters {
             else {
                 command.Parameters[2].Value = ((string)(Original_CategoryName));
             }
-            command.Parameters[3].Value = ((int)(CID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

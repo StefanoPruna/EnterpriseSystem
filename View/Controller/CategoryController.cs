@@ -34,11 +34,11 @@ namespace Controller
 
             return noOfRows;
         }
-        public int UpdateCategory(string originalNames, int originalCid, string newName, int newCid)
+        public int UpdateCategory(string originalNames, int originalCid, string newName)
         {
             CategoryLogic categoryLogic = new CategoryLogic();
             //categoryLogic.UpdateCategory(originalCid, originalNames);
-            int noOfRows = categoryLogic.UpdateCategory(originalNames, originalCid, newName, newCid);
+            int noOfRows = categoryLogic.UpdateCategory(originalNames, originalCid, newName);
             return noOfRows;
         }
     }

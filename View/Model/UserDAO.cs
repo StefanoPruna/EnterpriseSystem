@@ -77,5 +77,32 @@ namespace Model
             }
             else { return null; }
         }
+
+        public int InsertNewUser(string userName, string password, int userLevel)
+        {
+            TabUserTableAdapter tabUserTableAdapter = new TabUserTableAdapter();
+
+            int newUser = tabUserTableAdapter.InsertNewUser(userName, password, userLevel);
+
+            return newUser;
+        }
+
+        public int UpdateUser(string updatedUserName, string updatedPassword, int updatedUserLevel, string originalUserName)
+        {
+            TabUserTableAdapter tabUserTableAdapter = new TabUserTableAdapter();
+
+            int updateUser = tabUserTableAdapter.UpdateUser(updatedUserName, updatedPassword, updatedUserLevel, originalUserName);
+
+            return updateUser;
+        }
+
+        public int DeleteUser(string userName) 
+        {
+            TabUserTableAdapter tabUserTableAdapter = new TabUserTableAdapter();
+
+            int deleteUser = tabUserTableAdapter.DeleteUser(userName);
+
+            return deleteUser;
+        }
     }
 }
