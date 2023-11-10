@@ -46,6 +46,7 @@
             this.levelTextBox = new System.Windows.Forms.TextBox();
             this.originalLabel = new System.Windows.Forms.Label();
             this.originalTextBox = new System.Windows.Forms.TextBox();
+            this.clearButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,9 +64,9 @@
             // displayUsersButton
             // 
             this.displayUsersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayUsersButton.Location = new System.Drawing.Point(25, 425);
+            this.displayUsersButton.Location = new System.Drawing.Point(25, 446);
             this.displayUsersButton.Name = "displayUsersButton";
-            this.displayUsersButton.Size = new System.Drawing.Size(175, 130);
+            this.displayUsersButton.Size = new System.Drawing.Size(158, 109);
             this.displayUsersButton.TabIndex = 1;
             this.displayUsersButton.Text = "Display All Users";
             this.displayUsersButton.UseVisualStyleBackColor = true;
@@ -76,7 +77,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Location = new System.Drawing.Point(129, 592);
+            this.button2.Location = new System.Drawing.Point(391, 592);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(168, 117);
             this.button2.TabIndex = 2;
@@ -90,7 +91,7 @@
             this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.SystemColors.Info;
-            this.backButton.Location = new System.Drawing.Point(468, 592);
+            this.backButton.Location = new System.Drawing.Point(153, 592);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(122, 117);
             this.backButton.TabIndex = 3;
@@ -115,7 +116,7 @@
             this.exitButton.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.exitButton.Location = new System.Drawing.Point(938, 122);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(105, 192);
+            this.exitButton.Size = new System.Drawing.Size(105, 298);
             this.exitButton.TabIndex = 5;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
@@ -124,7 +125,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(775, 592);
+            this.button1.Location = new System.Drawing.Point(654, 592);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 117);
             this.button1.TabIndex = 6;
@@ -135,9 +136,9 @@
             // updateButton
             // 
             this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateButton.Location = new System.Drawing.Point(296, 436);
+            this.updateButton.Location = new System.Drawing.Point(235, 446);
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(168, 109);
+            this.updateButton.Size = new System.Drawing.Size(146, 109);
             this.updateButton.TabIndex = 7;
             this.updateButton.Text = "Update User";
             this.updateButton.UseVisualStyleBackColor = true;
@@ -146,9 +147,9 @@
             // addNewButton
             // 
             this.addNewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewButton.Location = new System.Drawing.Point(557, 436);
+            this.addNewButton.Location = new System.Drawing.Point(432, 446);
             this.addNewButton.Name = "addNewButton";
-            this.addNewButton.Size = new System.Drawing.Size(189, 109);
+            this.addNewButton.Size = new System.Drawing.Size(156, 109);
             this.addNewButton.TabIndex = 8;
             this.addNewButton.Text = "Add a New User";
             this.addNewButton.UseVisualStyleBackColor = true;
@@ -157,9 +158,9 @@
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.Location = new System.Drawing.Point(838, 436);
+            this.deleteButton.Location = new System.Drawing.Point(623, 446);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(165, 109);
+            this.deleteButton.Size = new System.Drawing.Size(146, 109);
             this.deleteButton.TabIndex = 9;
             this.deleteButton.Text = "Delete User";
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -233,11 +234,23 @@
             this.originalTextBox.Size = new System.Drawing.Size(176, 20);
             this.originalTextBox.TabIndex = 17;
             // 
+            // clearButton
+            // 
+            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Location = new System.Drawing.Point(824, 446);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(146, 109);
+            this.clearButton.TabIndex = 18;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
             // FormDisplayUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 758);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.originalTextBox);
             this.Controls.Add(this.originalLabel);
             this.Controls.Add(this.levelTextBox);
@@ -286,5 +299,6 @@
         private System.Windows.Forms.TextBox levelTextBox;
         private System.Windows.Forms.Label originalLabel;
         private System.Windows.Forms.TextBox originalTextBox;
+        private System.Windows.Forms.Button clearButton;
     }
 }

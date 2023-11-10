@@ -17,3 +17,4 @@ C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\bin\Debug\Model.dll.
 C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\obj\Debug\View.csproj.CopyComplete
 C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\obj\Debug\View.exe
 C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\obj\Debug\View.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\View\obj\Debug\View.FormBorrowReserveReturn.resources

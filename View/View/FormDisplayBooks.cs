@@ -88,5 +88,11 @@ namespace View
             publisherTextBox.Clear();
             dataGridView1.DataSource = "";
         }
+
+        private void borrowButton_Click(object sender, EventArgs e)
+        {
+            FormBorrowReserveReturn borrowBook = new FormBorrowReserveReturn();
+            borrowBook.Show();
+        }
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBorrowReserveReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBorrowReserveReturn.Designer.cs">
+      <DependentUpon>FormBorrowReserveReturn.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCategoryMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBorrowReserveReturn.resx">
+      <DependentUpon>FormBorrowReserveReturn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCategoryMaster.resx">
       <DependentUpon>FormCategoryMaster.cs</DependentUpon>
     </EmbeddedResource>

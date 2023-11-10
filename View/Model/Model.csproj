@@ -44,6 +44,9 @@
     <Compile Include="BookDAO.cs" />
     <Compile Include="BookLogic.cs" />
     <Compile Include="Books.cs" />
+    <Compile Include="Borrow.cs" />
+    <Compile Include="BorrowDAO.cs" />
+    <Compile Include="BorrowLogic.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="CategoryDAO.cs" />
     <Compile Include="CategoryLogic.cs" />
@@ -54,6 +57,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetBook.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetBorrow.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetBorrow.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSetCategory.cs">
       <DependentUpon>DataSetCategory.xsd</DependentUpon>
@@ -93,6 +101,17 @@
     </None>
     <None Include="DataSetBook.xss">
       <DependentUpon>DataSetBook.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetBorrow.xsc">
+      <DependentUpon>DataSetBorrow.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetBorrow.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetBorrow.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetBorrow.xss">
+      <DependentUpon>DataSetBorrow.xsd</DependentUpon>
     </None>
     <None Include="DataSetCategory.xsc">
       <DependentUpon>DataSetCategory.xsd</DependentUpon>

@@ -34,7 +34,8 @@ namespace View
             {
                 if (MessageBox.Show("Your login is incorrect", "Retry", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                 { }
-            }
+            }//username = admin, password == admin
+            //username = user, password == user
             else if (sUserName == user.UserName && sPassword == user.Password)
             {
                 if (MessageBox.Show("Your login is correct", "Run", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)

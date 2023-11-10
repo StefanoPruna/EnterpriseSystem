@@ -25,7 +25,7 @@ namespace View
             //Connect to the UserController Class
             UserController userController = new UserController();
             List<User> users = userController.GetAllUsers();
-
+            
             //display the data
             dataGridView1.DataSource = users;
         }
@@ -130,6 +130,15 @@ namespace View
                         MessageBox.Show("Good, Delete Succesful!!!");
                 }
             }
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            usernameTextBox.Clear();
+            passwordTextBox.Clear();
+            levelTextBox.Clear();
+            originalTextBox.Clear();
+            dataGridView1.DataSource = "";
         }
     }
 }

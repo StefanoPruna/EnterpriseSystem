@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.publisherTextBox = new System.Windows.Forms.TextBox();
             this.publisherLabel = new System.Windows.Forms.Label();
+            this.borrowButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,11 +189,25 @@
             this.publisherLabel.TabIndex = 12;
             this.publisherLabel.Text = "Search by Year:";
             // 
+            // borrowButton
+            // 
+            this.borrowButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.borrowButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.borrowButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.borrowButton.Location = new System.Drawing.Point(797, 230);
+            this.borrowButton.Name = "borrowButton";
+            this.borrowButton.Size = new System.Drawing.Size(161, 100);
+            this.borrowButton.TabIndex = 14;
+            this.borrowButton.Text = "Borrow / Reserve / Return Book";
+            this.borrowButton.UseVisualStyleBackColor = false;
+            this.borrowButton.Click += new System.EventHandler(this.borrowButton_Click);
+            // 
             // FormDisplayBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 483);
+            this.ClientSize = new System.Drawing.Size(1010, 483);
+            this.Controls.Add(this.borrowButton);
             this.Controls.Add(this.publisherTextBox);
             this.Controls.Add(this.publisherLabel);
             this.Controls.Add(this.label1);
@@ -232,5 +247,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox publisherTextBox;
         private System.Windows.Forms.Label publisherLabel;
+        private System.Windows.Forms.Button borrowButton;
     }
 }
