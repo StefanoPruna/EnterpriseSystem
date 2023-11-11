@@ -10,9 +10,15 @@ namespace Model
     {
         public List<Borrow> BorrowBook()
         {
-            Borrow borrow = new Borrow();
+            BorrowDAO borrow = new BorrowDAO();
             List<Borrow> borrows = borrow.BorrowBook();
             return borrows;
         }
-    }
+        public List<Borrow> ReserveBook()
+        {
+            BorrowDAO borrow = new BorrowDAO();
+            List<Borrow> borrows = borrow.ReserveBook();
+            return borrows;
+        }
+}
 }

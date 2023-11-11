@@ -16,5 +16,11 @@ namespace Controller
             List<Borrow> borrowBook = borrowLogic.BorrowBook();
             return borrowBook;
         }
+        public List<Borrow> ReserveBook()
+        {
+            BorrowLogic borrowLogic = new BorrowLogic();
+            List<Borrow> borrowBook = borrowLogic.ReserveBook();
+            return borrowBook;
+        }
     }
 }
