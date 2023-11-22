@@ -51,16 +51,21 @@ namespace View
         private void usersButton_Click(object sender, EventArgs e)
         {
             UserController userController = new UserController();
-            List<User> users = userController.GetAllUsers();
-            //BorrowController borrowController = new BorrowController();
-            //List<Borrow> borrow = borrowController.BorrowBook();
-            dataGridView1.DataSource = users;
-
-            //ComboBox comboBox = new ComboBox();
-            //comboBox.Items.Add(borrow.Count.ToString());
-            //comboBox.Items.Add(users[1]);            
-            //usernameComboBox.DataSource = comboBox;
+            List<User> users = userController.GetAllUsers();                    
             
+            foreach (User item in users)
+            {
+                //ComboBox userComboBox = new ComboBox();
+                string userName = item.UserName;
+                //userComboBox.Text = item.UserName;
+                
+                userComboBox.Items.Add(userName);
+                //userComboBox.SelectedIndex = 0;
+                //userComboBox.DataSource = item;
+            }
+
+            //userComboBox.DataSource = users;
+            //dataGridView1.DataSource = users;           
         }
 
         private void booksButton_Click(object sender, EventArgs e)
@@ -68,23 +73,36 @@ namespace View
             BookController bookController = new BookController();
             
             List<Books> books = bookController.GetAllBooks();
-            dataGridView2.DataSource = books;
-            //bookNameComboBox.DataSource = books;
+
+            foreach (Books book in books)
+            {
+                string bookName = book.BookName;
+                bookComboBox.Items.Add(bookName);
+            }
+            //dataGridView2.DataSource = books;
+            //bookComboBox.DataSource = books;
         }
 
         private void borrowButton_Click(object sender, EventArgs e)
         {
-            string insertUser = usernameTextBox.Text;
-            string insertBook = bookTextBox.Text;              
+            //string insertUser = usernameTextBox.Text;
+            //string insertBook = bookTextBox.Text;  
+            
+            string userName = userComboBox.Text;
+            string bookName = bookComboBox.Text;
             
             UserController userController = new UserController();
             BookController bookController = new BookController();
 
             BorrowController borrowController = new BorrowController();
             List<Borrow> borrowBook = borrowController.BorrowBook();
+                        
+            //borrowBook.Add(bookComboBox.Text);
+            //borrowBook.Add(insertBook);           
 
-            //System.DateTime currentTime = borrowDateTimePicker.Value;
             dataGridView3.DataSource = borrowBook;
+            //dataGridView3.DataSource = bookComboBox.Text;
+            //dataGridView3.DataSource = bookName;
             MessageBox.Show("You have borrowed the book");
         }
 
@@ -110,6 +128,11 @@ namespace View
                 MessageBox.Show("You have set a correct date to return the book. Penalty fee apply for late return.");
             else
                 MessageBox.Show("Sorry, you have not inserted the correct date.");
+        }
+
+        private void userComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

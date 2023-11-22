@@ -44,15 +44,9 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.usersButton = new System.Windows.Forms.Button();
             this.booksButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.bookTextBox = new System.Windows.Forms.TextBox();
-            this.insertUserLabel = new System.Windows.Forms.Label();
-            this.insertBookLabel = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.userComboBox = new System.Windows.Forms.ComboBox();
+            this.bookComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +85,7 @@
             // 
             this.borrowDateLabel.AutoSize = true;
             this.borrowDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.borrowDateLabel.Location = new System.Drawing.Point(635, 265);
+            this.borrowDateLabel.Location = new System.Drawing.Point(87, 277);
             this.borrowDateLabel.Name = "borrowDateLabel";
             this.borrowDateLabel.Size = new System.Drawing.Size(113, 24);
             this.borrowDateLabel.TabIndex = 3;
@@ -101,7 +95,7 @@
             // 
             this.returnLabel.AutoSize = true;
             this.returnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnLabel.Location = new System.Drawing.Point(635, 386);
+            this.returnLabel.Location = new System.Drawing.Point(87, 398);
             this.returnLabel.Name = "returnLabel";
             this.returnLabel.Size = new System.Drawing.Size(109, 24);
             this.returnLabel.TabIndex = 4;
@@ -111,7 +105,7 @@
             // 
             this.reserveLabel.AutoSize = true;
             this.reserveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reserveLabel.Location = new System.Drawing.Point(634, 328);
+            this.reserveLabel.Location = new System.Drawing.Point(86, 340);
             this.reserveLabel.Name = "reserveLabel";
             this.reserveLabel.Size = new System.Drawing.Size(123, 24);
             this.reserveLabel.TabIndex = 5;
@@ -122,7 +116,7 @@
             this.borrowButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.borrowButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.borrowButton.ForeColor = System.Drawing.Color.Green;
-            this.borrowButton.Location = new System.Drawing.Point(1043, 261);
+            this.borrowButton.Location = new System.Drawing.Point(495, 273);
             this.borrowButton.Name = "borrowButton";
             this.borrowButton.Size = new System.Drawing.Size(258, 35);
             this.borrowButton.TabIndex = 8;
@@ -133,23 +127,26 @@
             // borrowDateTimePicker
             // 
             this.borrowDateTimePicker.Enabled = false;
-            this.borrowDateTimePicker.Location = new System.Drawing.Point(783, 264);
+            this.borrowDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.borrowDateTimePicker.Location = new System.Drawing.Point(235, 276);
             this.borrowDateTimePicker.Name = "borrowDateTimePicker";
-            this.borrowDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.borrowDateTimePicker.Size = new System.Drawing.Size(200, 30);
             this.borrowDateTimePicker.TabIndex = 9;
             // 
             // reserveDateTimePicker
             // 
-            this.reserveDateTimePicker.Location = new System.Drawing.Point(783, 326);
+            this.reserveDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reserveDateTimePicker.Location = new System.Drawing.Point(235, 344);
             this.reserveDateTimePicker.Name = "reserveDateTimePicker";
-            this.reserveDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.reserveDateTimePicker.Size = new System.Drawing.Size(200, 30);
             this.reserveDateTimePicker.TabIndex = 10;
             // 
             // returnDateTimePicker
             // 
-            this.returnDateTimePicker.Location = new System.Drawing.Point(783, 380);
+            this.returnDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnDateTimePicker.Location = new System.Drawing.Point(235, 406);
             this.returnDateTimePicker.Name = "returnDateTimePicker";
-            this.returnDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.returnDateTimePicker.Size = new System.Drawing.Size(200, 30);
             this.returnDateTimePicker.TabIndex = 11;
             // 
             // reserveButton
@@ -157,7 +154,7 @@
             this.reserveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.reserveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reserveButton.ForeColor = System.Drawing.Color.Green;
-            this.reserveButton.Location = new System.Drawing.Point(1043, 325);
+            this.reserveButton.Location = new System.Drawing.Point(495, 337);
             this.reserveButton.Name = "reserveButton";
             this.reserveButton.Size = new System.Drawing.Size(258, 36);
             this.reserveButton.TabIndex = 12;
@@ -170,7 +167,7 @@
             this.returnButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.returnButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnButton.ForeColor = System.Drawing.Color.Green;
-            this.returnButton.Location = new System.Drawing.Point(1043, 380);
+            this.returnButton.Location = new System.Drawing.Point(495, 392);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(258, 34);
             this.returnButton.TabIndex = 13;
@@ -183,7 +180,7 @@
             this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.loginButton.Location = new System.Drawing.Point(91, 453);
+            this.loginButton.Location = new System.Drawing.Point(430, 484);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(138, 88);
             this.loginButton.TabIndex = 14;
@@ -196,7 +193,7 @@
             this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.Green;
-            this.exitButton.Location = new System.Drawing.Point(322, 453);
+            this.exitButton.Location = new System.Drawing.Point(661, 484);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(140, 88);
             this.exitButton.TabIndex = 16;
@@ -207,11 +204,12 @@
             // usersButton
             // 
             this.usersButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.usersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersButton.ForeColor = System.Drawing.Color.Yellow;
-            this.usersButton.Location = new System.Drawing.Point(79, 170);
+            this.usersButton.Location = new System.Drawing.Point(68, 170);
             this.usersButton.Name = "usersButton";
-            this.usersButton.Size = new System.Drawing.Size(77, 46);
-            this.usersButton.TabIndex = 17;
+            this.usersButton.Size = new System.Drawing.Size(104, 74);
+            this.usersButton.TabIndex = 20;
             this.usersButton.Text = "Display all Users";
             this.usersButton.UseVisualStyleBackColor = false;
             this.usersButton.Click += new System.EventHandler(this.usersButton_Click);
@@ -219,85 +217,52 @@
             // booksButton
             // 
             this.booksButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.booksButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.booksButton.ForeColor = System.Drawing.Color.Yellow;
             this.booksButton.Location = new System.Drawing.Point(709, 170);
             this.booksButton.Name = "booksButton";
-            this.booksButton.Size = new System.Drawing.Size(92, 46);
+            this.booksButton.Size = new System.Drawing.Size(105, 74);
             this.booksButton.TabIndex = 18;
             this.booksButton.Text = "Display all Books";
             this.booksButton.UseVisualStyleBackColor = false;
             this.booksButton.Click += new System.EventHandler(this.booksButton_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(178, 105);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(476, 127);
-            this.dataGridView1.TabIndex = 19;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(832, 105);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(476, 127);
-            this.dataGridView2.TabIndex = 20;
-            // 
-            // usernameTextBox
-            // 
-            this.usernameTextBox.Location = new System.Drawing.Point(322, 277);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(233, 20);
-            this.usernameTextBox.TabIndex = 21;
-            // 
-            // bookTextBox
-            // 
-            this.bookTextBox.Location = new System.Drawing.Point(322, 343);
-            this.bookTextBox.Name = "bookTextBox";
-            this.bookTextBox.Size = new System.Drawing.Size(233, 20);
-            this.bookTextBox.TabIndex = 22;
-            // 
-            // insertUserLabel
-            // 
-            this.insertUserLabel.AutoSize = true;
-            this.insertUserLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertUserLabel.Location = new System.Drawing.Point(87, 272);
-            this.insertUserLabel.Name = "insertUserLabel";
-            this.insertUserLabel.Size = new System.Drawing.Size(187, 24);
-            this.insertUserLabel.TabIndex = 23;
-            this.insertUserLabel.Text = "Insert your username";
-            // 
-            // insertBookLabel
-            // 
-            this.insertBookLabel.AutoSize = true;
-            this.insertBookLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertBookLabel.Location = new System.Drawing.Point(87, 339);
-            this.insertBookLabel.Name = "insertBookLabel";
-            this.insertBookLabel.Size = new System.Drawing.Size(217, 24);
-            this.insertBookLabel.TabIndex = 24;
-            this.insertBookLabel.Text = "Insert the book to borrow";
-            // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(783, 431);
+            this.dataGridView3.Location = new System.Drawing.Point(773, 299);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(476, 127);
             this.dataGridView3.TabIndex = 25;
+            // 
+            // userComboBox
+            // 
+            this.userComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userComboBox.FormattingEnabled = true;
+            this.userComboBox.Location = new System.Drawing.Point(209, 132);
+            this.userComboBox.Name = "userComboBox";
+            this.userComboBox.Size = new System.Drawing.Size(179, 33);
+            this.userComboBox.TabIndex = 26;
+            this.userComboBox.SelectedIndexChanged += new System.EventHandler(this.userComboBox_SelectedIndexChanged);
+            // 
+            // bookComboBox
+            // 
+            this.bookComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookComboBox.FormattingEnabled = true;
+            this.bookComboBox.ItemHeight = 25;
+            this.bookComboBox.Location = new System.Drawing.Point(862, 132);
+            this.bookComboBox.Name = "bookComboBox";
+            this.bookComboBox.Size = new System.Drawing.Size(224, 33);
+            this.bookComboBox.TabIndex = 27;
             // 
             // FormBorrowReserveReturn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 598);
+            this.Controls.Add(this.bookComboBox);
+            this.Controls.Add(this.userComboBox);
             this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.insertBookLabel);
-            this.Controls.Add(this.insertUserLabel);
-            this.Controls.Add(this.bookTextBox);
-            this.Controls.Add(this.usernameTextBox);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.booksButton);
             this.Controls.Add(this.usersButton);
             this.Controls.Add(this.exitButton);
@@ -317,8 +282,6 @@
             this.Name = "FormBorrowReserveReturn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBorrowReserveReturn";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -343,12 +306,8 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button usersButton;
         private System.Windows.Forms.Button booksButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.TextBox bookTextBox;
-        private System.Windows.Forms.Label insertUserLabel;
-        private System.Windows.Forms.Label insertBookLabel;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.ComboBox userComboBox;
+        private System.Windows.Forms.ComboBox bookComboBox;
     }
 }

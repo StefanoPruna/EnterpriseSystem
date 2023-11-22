@@ -57,7 +57,7 @@ namespace Model
 
             if(dataCount != 0)
             {
-                for (int i = 0; i<reservedRows.Rows.Count; i++) 
+                for (int i = 0; i < reservedRows.Rows.Count; i++) 
                 {
                     Borrow reserveBook = new Borrow();
                     DataRow reservedDataRow = reservedRows.Rows[i];

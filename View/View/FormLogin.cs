@@ -51,7 +51,7 @@ namespace View
                         studentDashboard.Show();
                     }
                 }
-            }
+            }            
             else
             {
                 if (MessageBox.Show("Your login is incorrect", "Retry", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)

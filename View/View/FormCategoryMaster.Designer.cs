@@ -129,7 +129,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(64, 102);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(553, 264);
+            this.dataGridView1.Size = new System.Drawing.Size(589, 264);
             this.dataGridView1.TabIndex = 8;
             // 
             // goBackButton
@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 483);
+            this.ClientSize = new System.Drawing.Size(922, 486);
             this.Controls.Add(this.updateNameTextBox);
             this.Controls.Add(this.updateNameLabel);
             this.Controls.Add(this.goBackButton);
