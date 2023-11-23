@@ -56,10 +56,13 @@ namespace View
             foreach (User item in users)
             {
                 //ComboBox userComboBox = new ComboBox();
+                //string userName = Convert.ToString(item.UserName);
                 string userName = item.UserName;
+                int uid = item.Uid;
                 //userComboBox.Text = item.UserName;
                 
                 userComboBox.Items.Add(userName);
+                uidComboBox.Items.Add(uid);
                 //userComboBox.SelectedIndex = 0;
                 //userComboBox.DataSource = item;
             }
@@ -76,8 +79,10 @@ namespace View
 
             foreach (Books book in books)
             {
+                string isbnBook = book.Isbn;
                 string bookName = book.BookName;
-                bookComboBox.Items.Add(bookName);
+                bookNameComboBox.Items.Add(bookName);
+                isbnComboBox.Items.Add(isbnBook);
             }
             //dataGridView2.DataSource = books;
             //bookComboBox.DataSource = books;
@@ -85,37 +90,50 @@ namespace View
 
         private void borrowButton_Click(object sender, EventArgs e)
         {
-            //string insertUser = usernameTextBox.Text;
-            //string insertBook = bookTextBox.Text;  
-            
-            string userName = userComboBox.Text;
-            string bookName = bookComboBox.Text;
-            
-            UserController userController = new UserController();
-            BookController bookController = new BookController();
+            System.DateTime currentTime = borrowDateTimePicker.Value;
+            System.DateTime returnDate = returnDateTimePicker.Value;
 
-            BorrowController borrowController = new BorrowController();
-            List<Borrow> borrowBook = borrowController.BorrowBook();
-                        
-            //borrowBook.Add(bookComboBox.Text);
-            //borrowBook.Add(insertBook);           
+            int sUserName = uidComboBox.SelectedIndex;
+            string bookId = isbnComboBox.Text;
 
-            dataGridView3.DataSource = borrowBook;
-            //dataGridView3.DataSource = bookComboBox.Text;
-            //dataGridView3.DataSource = bookName;
-            MessageBox.Show("You have borrowed the book");
+            if(returnDateTimePicker.Value > currentTime)
+            {
+                BorrowController borrowController = new BorrowController();
+                int bookBorrowed = borrowController.BorrowBook(sUserName, bookId, currentTime, returnDate);
+
+                if(bookBorrowed == -1)
+                    MessageBox.Show("Sorry, save unsuccesful");
+                else
+                    MessageBox.Show("Good, You have reserved the book!!!");
+            }
+            else
+                MessageBox.Show("Sorry, You have not inserted the correct return date");
         }
 
         private void reserveButton_Click(object sender, EventArgs e)
         {
             System.DateTime currentTime = borrowDateTimePicker.Value;
+            System.DateTime reservedDate = reserveDateTimePicker.Value;
+            
+            string bookId = isbnComboBox.Text;
+            int userUid = uidComboBox.SelectedIndex;
+           
             if (reserveDateTimePicker.Value > currentTime)
             {
                 BorrowController borrowController = new BorrowController();
-                List<Borrow> borrowBook = borrowController.ReserveBook(); 
-                borrowBook.Add(new Borrow());
-                dataGridView3.DataSource = borrowBook;
-                MessageBox.Show("You have reserved the book");
+                //List<Borrow> borrowBook = borrowController.ReservedBook(userId, sBookId, currentTime); 
+                int bookReserved = borrowController.ReservedBook(userUid, bookId, reservedDate);
+
+                if (bookReserved == -1)
+                    MessageBox.Show("Sorry, save unsuccesful");
+                else               
+                    MessageBox.Show("Good, You have reserved the book!!!");
+
+
+                //dataGridView3.DataSource = bookReserved;
+                //borrowBook.Add(new Borrow());
+                //dataGridView3.DataSource = borrowBook;
+                //MessageBox.Show("You have reserved the book");
             }
             else
                 MessageBox.Show("Sorry, you have not inserted the correct date.");
@@ -133,6 +151,56 @@ namespace View
         private void userComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void showBorrowedBooks_Click(object sender, EventArgs e)
+        {
+            BorrowController borrowController = new BorrowController();
+            List<Borrow> borrows = borrowController.BorrowBookList();
+
+            dataGridView3.DataSource = borrows;
+        }
+
+        private void showReservedBooks_Click(object sender, EventArgs e)
+        {
+            BorrowController borrowController = new BorrowController();
+            List<Borrow> borrows = borrowController.ShowReservedBook();
+
+            dataGridView3.DataSource = borrows;
+        }
+
+        private void FormBorrowReserveReturn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {            
+            //Delete Reserved Button
+            //int rid = uidComboBox.SelectedIndex;
+            string bookIsbn = isbnComboBox.Text;
+
+            BorrowController controller = new BorrowController();
+            
+            if (bookIsbn == "")
+            {
+                if (MessageBox.Show("You have not insert the correct details", "Retry", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
+                { }
+            }
+            else
+            {
+                //int remove = Convert.ToInt32(bookIsbn);
+                int deleteRow = controller.DeleteReserved(bookIsbn);
+                int deleteBorrow = controller.DeleteBorrow(bookIsbn);
+
+                if (deleteRow == -1 || deleteBorrow == -1)
+                    MessageBox.Show("Sorry, you cannot delete the default rows");
+                else
+                {
+                    if ((MessageBox.Show("Are you sure want to delete it?", "YesNo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes))
+                        MessageBox.Show("Good, Delete Succesful!!!");
+                }
+            }
         }
     }
 }

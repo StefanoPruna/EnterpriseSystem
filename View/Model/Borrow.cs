@@ -8,6 +8,7 @@ namespace Model
 {
     public class Borrow
     {
+        int rid;
         int bid;
         int uid;
         string isbn;
@@ -26,5 +27,6 @@ namespace Model
         public DateTime ActualReturnDate { get => actualReturnDate; set => actualReturnDate = value; }
         public decimal LateFee { get => lateFee; set => lateFee = value; }
         public DateTime ReservedDate { get => reservedDate; set => reservedDate = value; }
+        public int Rid { get => rid; set => rid = value; }
     }
 }

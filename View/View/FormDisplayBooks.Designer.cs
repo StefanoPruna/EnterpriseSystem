@@ -70,7 +70,7 @@
             this.SearchButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.SearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SearchButton.Location = new System.Drawing.Point(576, 77);
+            this.SearchButton.Location = new System.Drawing.Point(602, 77);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(212, 105);
             this.SearchButton.TabIndex = 2;
@@ -102,7 +102,7 @@
             // searchTextBox
             // 
             this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTextBox.Location = new System.Drawing.Point(187, 77);
+            this.searchTextBox.Location = new System.Drawing.Point(213, 77);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(382, 30);
             this.searchTextBox.TabIndex = 5;
@@ -133,7 +133,7 @@
             // yearTextBox
             // 
             this.yearTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearTextBox.Location = new System.Drawing.Point(187, 115);
+            this.yearTextBox.Location = new System.Drawing.Point(213, 115);
             this.yearTextBox.Name = "yearTextBox";
             this.yearTextBox.Size = new System.Drawing.Size(382, 30);
             this.yearTextBox.TabIndex = 9;
@@ -174,7 +174,7 @@
             // publisherTextBox
             // 
             this.publisherTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.publisherTextBox.Location = new System.Drawing.Point(187, 152);
+            this.publisherTextBox.Location = new System.Drawing.Point(213, 152);
             this.publisherTextBox.Name = "publisherTextBox";
             this.publisherTextBox.Size = new System.Drawing.Size(382, 30);
             this.publisherTextBox.TabIndex = 13;
@@ -185,9 +185,9 @@
             this.publisherLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.publisherLabel.Location = new System.Drawing.Point(17, 157);
             this.publisherLabel.Name = "publisherLabel";
-            this.publisherLabel.Size = new System.Drawing.Size(153, 25);
+            this.publisherLabel.Size = new System.Drawing.Size(193, 25);
             this.publisherLabel.TabIndex = 12;
-            this.publisherLabel.Text = "Search by Year:";
+            this.publisherLabel.Text = "Search by Publisher:";
             // 
             // borrowButton
             // 

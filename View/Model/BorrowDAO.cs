@@ -12,10 +12,10 @@ namespace Model
 {
     public class BorrowDAO
     {
-        public List<Borrow> BorrowBook()
+        public List<Borrow> BorrowBookList()
         {
             TabBorrowTableAdapter adapter = new TabBorrowTableAdapter();
-            DataSetBorrow.TabBorrowDataTable borrowDataTable = adapter.BorrowBook();
+            DataSetBorrow.TabBorrowDataTable borrowDataTable = adapter.BorrowBookList();
 
             int dataCount = borrowDataTable.Count;
             if (dataCount != 0)
@@ -47,35 +47,64 @@ namespace Model
             else
                 return null;
         }
-        public List<Borrow> ReserveBook()
+        public int BorrowBook(int id, string bookIsbn, DateTime dateBorrowed, DateTime dateReturned)
+        {
+            TabBorrowTableAdapter tabBorrowTableAdapter = new TabBorrowTableAdapter();
+            string dtBorrowed = Convert.ToString(dateBorrowed);
+            string dtReturned = Convert.ToString(dateReturned);
+            int bookBorrowed = tabBorrowTableAdapter.BorrowBook(id, bookIsbn, dtBorrowed, dtReturned);
+            return bookBorrowed;
+        }
+        public int ReservedBook(int userId, string iSbN, DateTime bookReserved)
         {
             TabReservedTableAdapter reservedTableAdapter = new TabReservedTableAdapter();
-            DataSetBorrow.TabReservedDataTable reservedRows = reservedTableAdapter.ReserveBook();
+            //DateTime dtReserved = Convert.ToDateTime(bookReserved);
+            string dtReserved = Convert.ToString(bookReserved.ToString());
 
-            int dataCount = reservedRows.Count;
-            List<Borrow> reserve = new List<Borrow>();
+            int borrows = reservedTableAdapter.ReservedBook(userId, iSbN, dtReserved);
+            return borrows;
+        }
+        public List<Borrow> ShowReservedBook()
+        {
+            TabReservedTableAdapter adapter = new TabReservedTableAdapter();
+            
+            DataSetBorrow.TabReservedDataTable borrowDataTable = adapter.ShowReservedBook();
 
-            if(dataCount != 0)
+            int dataCount = borrowDataTable.Count;
+            if (dataCount != 0)
             {
-                for (int i = 0; i < reservedRows.Rows.Count; i++) 
+                List<Borrow> borrows = new List<Borrow>();
+                foreach (DataRow row in borrowDataTable)
                 {
-                    Borrow reserveBook = new Borrow();
-                    DataRow reservedDataRow = reservedRows.Rows[i];
+                    int rid = Convert.ToInt32(row["RID"]);
+                    int uid = Convert.ToInt32(row["UID"]);
+                    string isbn = row["ISBN"].ToString();
+                    DateTime reservedDate = Convert.ToDateTime(row["ReservedDate"]);
 
-                    int uid = Convert.ToInt32(reservedDataRow["UID"]);
-                    string isbn = reservedDataRow["ISBN"].ToString();
-                    DateTime reservedDate = Convert.ToDateTime(reservedDataRow["ReservedDate"]);
+                    Borrow borrow = new Borrow();
+                    borrow.Uid = uid;
+                    borrow.Isbn = isbn;
+                    borrow.Rid = rid;
+                    borrow.ReservedDate = reservedDate;
 
-                    reserveBook.Uid = uid;
-                    reserveBook.Isbn = isbn;
-                    reserveBook.ReservedDate = reservedDate;                    
-
-                    reserve.Add(reserveBook);
+                    borrows.Add(borrow);
                 }
-                return reserve;
+                return borrows;
             }
             else
                 return null;
+        }
+        public int DeleteReserved(string bookIsbn)
+        {
+            TabReservedTableAdapter deleteReserved = new TabReservedTableAdapter();
+            int deleteReserve = deleteReserved.DeleteReserved(bookIsbn);
+            return deleteReserve;
+        }
+        public int DeleteBorrow(string bookIsbn)
+        {
+            TabBorrowTableAdapter deleteBorrowed = new TabBorrowTableAdapter();
+            int deleteBorrow = deleteBorrowed.DeleteBorrow(bookIsbn);
+            return deleteBorrow;
         }
     }
 }
