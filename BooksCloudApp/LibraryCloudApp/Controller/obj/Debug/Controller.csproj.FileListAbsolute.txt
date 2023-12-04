@@ -1,0 +1,35 @@
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Controller\obj\Debug\Controller.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Controller\bin\Debug\Controller.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Controller\bin\Debug\Controller.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Controller\bin\Debug\Model.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Controller\bin\Debug\Model.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Controller\bin\Debug\Model.dll.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Controller\obj\Debug\Controller.csproj.CopyComplete
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Controller\obj\Debug\Controller.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\View\Controller\obj\Debug\Controller.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryWebService\Controller\bin\Debug\Controller.dll.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryWebService\Controller\bin\Debug\Controller.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryWebService\Controller\bin\Debug\Controller.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryWebService\Controller\bin\Debug\Model.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryWebService\Controller\bin\Debug\Model.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryWebService\Controller\bin\Debug\Model.dll.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryWebService\Controller\obj\Debug\Controller.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryWebService\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryWebService\Controller\obj\Debug\Controller.csproj.CopyComplete
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryWebService\Controller\obj\Debug\Controller.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryWebService\Controller\obj\Debug\Controller.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryCloudApp\Controller\bin\Debug\Controller.dll.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryCloudApp\Controller\bin\Debug\Controller.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryCloudApp\Controller\bin\Debug\Controller.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryCloudApp\Controller\obj\Debug\Controller.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryCloudApp\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryCloudApp\Controller\obj\Debug\Controller.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\LibraryCloudApp\Controller\obj\Debug\Controller.pdb
+C:\Users\makem\Documents\AIT Documents\Enterprise Systems\Assignments\LibraryCloudApp\Controller\bin\Debug\Controller.dll.config
+C:\Users\makem\Documents\AIT Documents\Enterprise Systems\Assignments\LibraryCloudApp\Controller\bin\Debug\Controller.dll
+C:\Users\makem\Documents\AIT Documents\Enterprise Systems\Assignments\LibraryCloudApp\Controller\bin\Debug\Controller.pdb
+C:\Users\makem\Documents\AIT Documents\Enterprise Systems\Assignments\LibraryCloudApp\Controller\obj\Debug\Controller.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\AIT Documents\Enterprise Systems\Assignments\LibraryCloudApp\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\AIT Documents\Enterprise Systems\Assignments\LibraryCloudApp\Controller\obj\Debug\Controller.dll
+C:\Users\makem\Documents\AIT Documents\Enterprise Systems\Assignments\LibraryCloudApp\Controller\obj\Debug\Controller.pdb

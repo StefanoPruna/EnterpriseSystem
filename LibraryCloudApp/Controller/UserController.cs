@@ -55,8 +55,8 @@ namespace Controller
 
             if (sUserName == "" || sPassword == "")
                 Console.WriteLine("Your login is incorrect");
-            //else if (sUserName != user.UserName || sPassword != user.Password)
-            //    Console.WriteLine("Your login is incorrect");
+            else if (user.UserName != sUserName || user.Password != sPassword)
+                Console.WriteLine("Your login is incorrect");
             else
             {
                 user.UserName = tempUser.UserName;
