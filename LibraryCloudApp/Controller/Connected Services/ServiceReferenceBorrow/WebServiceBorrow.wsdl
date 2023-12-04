@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="BorrowBookList">
+        <s:complexType />
+      </s:element>
+      <s:element name="BorrowBookListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BorrowBookListResult" type="tns:ArrayOfBorrow" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBorrow">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Borrow" nillable="true" type="tns:Borrow" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Borrow">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Bid" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Uid" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Isbn" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BorrowDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReturnDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActualReturnDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LateFee" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReservedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rid" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BorrowBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="bookIsbn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dateBorrowed" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dateReturned" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrowBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BorrowBookResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReservedBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="iSbN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bookReserved" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReservedBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReservedBookResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowReservedBook">
+        <s:complexType />
+      </s:element>
+      <s:element name="ShowReservedBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowReservedBookResult" type="tns:ArrayOfBorrow" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteReserved">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bookIsbn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteReservedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteReservedResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBorrow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bookIsbn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBorrowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteBorrowResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="BorrowBookListSoapIn">
+    <wsdl:part name="parameters" element="tns:BorrowBookList" />
+  </wsdl:message>
+  <wsdl:message name="BorrowBookListSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrowBookListResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorrowBookSoapIn">
+    <wsdl:part name="parameters" element="tns:BorrowBook" />
+  </wsdl:message>
+  <wsdl:message name="BorrowBookSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrowBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReservedBookSoapIn">
+    <wsdl:part name="parameters" element="tns:ReservedBook" />
+  </wsdl:message>
+  <wsdl:message name="ReservedBookSoapOut">
+    <wsdl:part name="parameters" element="tns:ReservedBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowReservedBookSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowReservedBook" />
+  </wsdl:message>
+  <wsdl:message name="ShowReservedBookSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowReservedBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteReservedSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteReserved" />
+  </wsdl:message>
+  <wsdl:message name="DeleteReservedSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteReservedResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBorrowSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteBorrow" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBorrowSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteBorrowResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceBorrowSoap">
+    <wsdl:operation name="BorrowBookList">
+      <wsdl:input message="tns:BorrowBookListSoapIn" />
+      <wsdl:output message="tns:BorrowBookListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrowBook">
+      <wsdl:input message="tns:BorrowBookSoapIn" />
+      <wsdl:output message="tns:BorrowBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReservedBook">
+      <wsdl:input message="tns:ReservedBookSoapIn" />
+      <wsdl:output message="tns:ReservedBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowReservedBook">
+      <wsdl:input message="tns:ShowReservedBookSoapIn" />
+      <wsdl:output message="tns:ShowReservedBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReserved">
+      <wsdl:input message="tns:DeleteReservedSoapIn" />
+      <wsdl:output message="tns:DeleteReservedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBorrow">
+      <wsdl:input message="tns:DeleteBorrowSoapIn" />
+      <wsdl:output message="tns:DeleteBorrowSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceBorrowSoap" type="tns:WebServiceBorrowSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BorrowBookList">
+      <soap:operation soapAction="http://tempuri.org/BorrowBookList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrowBook">
+      <soap:operation soapAction="http://tempuri.org/BorrowBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReservedBook">
+      <soap:operation soapAction="http://tempuri.org/ReservedBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowReservedBook">
+      <soap:operation soapAction="http://tempuri.org/ShowReservedBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReserved">
+      <soap:operation soapAction="http://tempuri.org/DeleteReserved" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBorrow">
+      <soap:operation soapAction="http://tempuri.org/DeleteBorrow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceBorrowSoap12" type="tns:WebServiceBorrowSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BorrowBookList">
+      <soap12:operation soapAction="http://tempuri.org/BorrowBookList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrowBook">
+      <soap12:operation soapAction="http://tempuri.org/BorrowBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReservedBook">
+      <soap12:operation soapAction="http://tempuri.org/ReservedBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowReservedBook">
+      <soap12:operation soapAction="http://tempuri.org/ShowReservedBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReserved">
+      <soap12:operation soapAction="http://tempuri.org/DeleteReserved" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBorrow">
+      <soap12:operation soapAction="http://tempuri.org/DeleteBorrow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceBorrow">
+    <wsdl:port name="WebServiceBorrowSoap" binding="tns:WebServiceBorrowSoap">
+      <soap:address location="https://localhost:44359/WebServiceBorrow.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceBorrowSoap12" binding="tns:WebServiceBorrowSoap12">
+      <soap12:address location="https://localhost:44359/WebServiceBorrow.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
