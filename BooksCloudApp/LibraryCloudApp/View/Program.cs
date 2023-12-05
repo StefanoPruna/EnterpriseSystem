@@ -20,9 +20,9 @@ namespace View
             Application.Run(new FormLogin());
 
             //Then goes to the Books table
-            Application.Run(new FormDisplayBooks());
+            //Application.Run(new FormDisplayBooks());
            
-            Application.Run(new FormDisplayUsers());
+            //Application.Run(new FormDisplayUsers());
         }
     }
 }

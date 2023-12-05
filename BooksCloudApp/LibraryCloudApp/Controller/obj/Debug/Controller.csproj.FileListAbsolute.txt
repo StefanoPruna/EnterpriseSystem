@@ -33,3 +33,10 @@ C:\Users\makem\Documents\AIT Documents\Enterprise Systems\Assignments\LibraryClo
 C:\Users\makem\Documents\AIT Documents\Enterprise Systems\Assignments\LibraryCloudApp\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
 C:\Users\makem\Documents\AIT Documents\Enterprise Systems\Assignments\LibraryCloudApp\Controller\obj\Debug\Controller.dll
 C:\Users\makem\Documents\AIT Documents\Enterprise Systems\Assignments\LibraryCloudApp\Controller\obj\Debug\Controller.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BooksCloudApp\LibraryCloudApp\Controller\bin\Debug\Controller.dll.config
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BooksCloudApp\LibraryCloudApp\Controller\bin\Debug\Controller.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BooksCloudApp\LibraryCloudApp\Controller\bin\Debug\Controller.pdb
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BooksCloudApp\LibraryCloudApp\Controller\obj\Debug\Controller.csproj.AssemblyReference.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BooksCloudApp\LibraryCloudApp\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BooksCloudApp\LibraryCloudApp\Controller\obj\Debug\Controller.dll
+C:\Users\makem\Documents\GitHub\EnterpriseSystems\BooksCloudApp\LibraryCloudApp\Controller\obj\Debug\Controller.pdb

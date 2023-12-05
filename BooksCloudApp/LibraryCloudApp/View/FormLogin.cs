@@ -30,17 +30,11 @@ namespace View
             //int userName = Convert.ToInt32(sUserName);
             //int password = Convert.ToInt32(sPassword);
 
-            if (sUserName == "" || sPassword == "")
+            if (sUserName == "" || sPassword == "" || user == null)
             {
                 if (MessageBox.Show("Your login is incorrect", "Retry", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                 { }
             }
-            //It doesn't work when the Username or Password are wrong
-            //else if (sUserName != user.UserName && sPassword != user.Password)
-            //{
-            //    if (MessageBox.Show("Your login is incorrect", "Retry", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
-            //    { }
-            //}
             else if (sUserName == user.UserName && sPassword == user.Password)
             {
                 if (MessageBox.Show("Your login is correct", "Run", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)

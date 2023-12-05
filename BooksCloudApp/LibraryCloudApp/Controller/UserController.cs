@@ -50,6 +50,9 @@ namespace Controller
             ServiceReferenceLogin.WebServiceLibrarySoapClient soapClient = new ServiceReferenceLogin.WebServiceLibrarySoapClient();
             ServiceReferenceLogin.User tempUser = soapClient.ValideLogin(sUserName, sPassword);
 
+            if (tempUser == null)
+                return null;
+
             User user = new User();
             
 
